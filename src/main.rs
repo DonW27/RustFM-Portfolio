@@ -225,7 +225,7 @@ fn main() -> Result<(), Box<dyn Error>>{
         }
     });
 
-    // Callback closure that goes back one directory, unless in root directory
+    // Callback closure that goes to the directory specified in path LineEdit, gives error dialog if invalid path
     let rust_fm_weak = rust_fm.as_weak();
     rust_fm.on_go_to_path(move |p| {
         let rust_fm = rust_fm_weak.unwrap();
