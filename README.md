@@ -1,4 +1,4 @@
-# Portfolio Project: First Checki-in 
+# Portfolio Project
 
 Donald Whitehead  
 CS-339R Fall 2023  
