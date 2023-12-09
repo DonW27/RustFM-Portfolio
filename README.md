@@ -26,18 +26,24 @@ Windows: Rust recommends installing “Desktop Development with C++” through V
 **To run:**  
   Ideal way to run is to use Cargo with the 'cargo run --release' command in the project root, but you can also compile and run the binary.  
 
-  -If launched without a path as an argument, the program will start in the current directory.  
-  -If a path is supplied (example: cargo run -- '\home') then the program will start in the specified directory.  
+  - If launched without a path as an argument, the program will start in the current directory.  
+  - If a path is supplied (example: cargo run -- '\home') then the program will start in the specified directory.  
 
 **Usage:**  
-  -Navigation is very simple. click once to highlight an directory or file, clicking a highlighted item a second time will either change to that directory or open the file.  
-  -You can go back to the parent directory by hitting the back button.  
-  -You can navigate to a folder directly if by entering the full path into the navigation bar.
+  - Navigation is very simple. click once to highlight an directory or file, clicking a highlighted item a second time will either change to that directory or open the file.  
+  - You can go back to the parent directory by hitting the back button.  
+  - You can navigate to a folder directly if by entering the full path into the navigation bar.  
+  - There are a series of buttons on the bottom row that allow for file manipulation. Starting from the right:
+    - Rename: Allows you to rename a file or directory to something that does not exist. Be sure to use the full file name, including extension
+    - Copy: Copies a file into the same directory with a copy_ prefix on the name. Does not work with directories.
+    - Move: Moves a file or directory to another directory on the same mount, you must use the full path for the destination or it will fail.
+    - New Directory: Creates a new directory in the current working directory, or you can specify the path.
+    - Delete: Prompts if you want to delete a file and removes it. Does not work with directories.
 
-**Bugs**  
-  -There are some issues when opening certain directories, such as shortcuts and directories that link elsewhere.  
-  -The list tends to shift slightly when highlighting an item, it can be annoying when trying to double click.  
-  -Some files may not open if your OS does not have a default application for them.  
+**Bugs**    
+  - The list tends to shift slightly when highlighting an item, it can be annoying when trying to double click.  
+  - Some files may not open if your OS does not have a default application for them.  
+  - Error dialogs don't work with other windows present, so currently if you try to move to a non-existant folder or rename to something that already exists, it just does nothing with no dialog.  
 
 
 
